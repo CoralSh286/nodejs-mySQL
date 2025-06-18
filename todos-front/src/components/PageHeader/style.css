@@ -1,0 +1,26 @@
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .page-title {
+    color: #2d3748;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+    position: relative;
+  }
+  
+  .page-title::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: #4a90e2;
+    margin-top: 0.5rem;
+    border-radius: 2px;
+  }

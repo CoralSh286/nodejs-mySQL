@@ -1,0 +1,224 @@
+/* Refined Modern InfoPage Styles */
+
+.info-page {
+    max-width: 800px;
+    margin: 1.5rem auto;
+    padding: 0 0.5rem; /* Reduced container padding */
+  }
+  
+  .info-page__title {
+    font-size: 1.75rem;
+    color: #2d3748;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+  
+  .info-card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+    position: relative;
+  }
+  
+  /* Header with profile banner */
+  .info-card__header {
+    padding: 1rem .7rem .7rem; /* Reduced padding */
+    text-align: center;
+    position: relative;
+  }
+  
+  .info-card__header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px; /* Smaller banner */
+    background: linear-gradient(135deg, #4a90e2 0%, #3a7cc0 100%);
+    z-index: 0;
+  }
+  
+  .info-card__avatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: #4a90e2;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.25rem;
+    font-weight: 600;
+    margin: 0 auto 0.75rem;
+    border: 4px solid white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    position: relative;
+    z-index: 1;
+  }
+  
+  .info-card__name {
+    font-size: 1.5rem;
+    margin: 0 0 0.2rem 0;
+    color: #2d3748;
+    font-weight: 700;
+  }
+  
+  .info-card__username {
+    font-size: 0.95rem;
+    color: #4a90e2;
+    font-weight: 500;
+    display: inline-block;
+  }
+  
+  /* Section styling */
+  .info-card__section {
+    padding: .7rem; /* Reduced section padding */
+  }
+  
+  .info-card__section:not(:last-child) {
+    position: relative;
+  }
+  
+  .info-card__section:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 15%;
+    right: 15%;
+    height: 1px;
+    background: #f0f4f8;
+  }
+  
+  .info-card__section-title {
+    font-size: 1rem;
+    color: #4a5568;
+    margin: 0 0 1rem 0; /* Reduced margin */
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+  }
+  
+  .info-card__section-title::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background-color: #4a90e2;
+    margin-right: 0.4rem;
+    border-radius: 50%;
+  }
+  
+  /* Modern card layout with improved spacing */
+  .info-card__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Narrower cards */
+    gap: 1rem; /* Reduced gap */
+  }
+  
+  .info-card__item {
+    background-color: #f8fafc;
+    padding: 0.75rem; /* Reduced padding */
+    border-radius: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .info-card__item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  }
+  
+  .info-card__item.full-width {
+    grid-column: 1 / -1;
+  }
+  
+  .info-card__label {
+    font-size: 0.7rem; /* Smaller label font */
+    color: #718096;
+    margin-bottom: 0.35rem; /* Reduced space between label and value */
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    line-height: 1;
+    margin: 0 8px;
+  }
+  
+  .info-card__value {
+    font-size: 0.95rem;
+    color: #2d3748;
+    font-weight: 500;
+    word-break: break-word;
+    line-height: 1.3;
+  }
+  
+  /* Loading and error states */
+  .info-page.loading,
+  .info-page.error {
+    text-align: center;
+    padding: 1rem;
+    color: #4a5568;
+    font-size: 1rem;
+  }
+  
+  .info-page.error {
+    color: #e53e3e;
+  }
+  
+  /* Enhanced responsive adjustments */
+  @media (max-width: 768px) {
+    .info-card__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .info-card__grid {
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+    }
+    
+    .info-page {
+      margin: 1rem 0.5rem;
+      padding: 0;
+    }
+    
+    .info-card__section {
+      padding: 0.5rem 0.85rem;
+    }
+    
+    .info-card__header {
+      padding: 0.75rem 0.5rem 0.5rem;
+    }
+    
+    .info-card__header::before {
+      height: 60px;
+    }
+    
+    .info-card__avatar {
+      width: 75px;
+      height: 75px;
+      font-size: 1.75rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .info-card__name {
+      font-size: 1.35rem;
+    }
+    
+    .info-card__username {
+      font-size: 0.85rem;
+    }
+  }
+  
+  /* Landscape phone mode */
+  @media (max-width: 768px) and (orientation: landscape) {
+    .info-card__grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .info-card__header {
+      padding-top: 1rem;
+    }
+  }

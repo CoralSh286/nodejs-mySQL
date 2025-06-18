@@ -1,0 +1,78 @@
+/* Photo Card Styles - White Theme, Smaller Size */
+.photo-card {
+  width: 200px;
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+  cursor: pointer;
+   border: 2px solid transparent;
+}
+
+.photo-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+.photo-card.selected {
+  border-color: #3498db;
+  background-color: #f7fbfe;
+}
+
+.photo-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+}
+
+.photo-title {
+  order: 2;
+  width: 100%;
+  margin: 0;
+  padding: 12px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333333;
+  text-align: center;
+  background: #f8f9fa;
+  border-top: 1px solid #e5e5e5;
+}
+
+.photo-info img {
+  order: 1;
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+  display: block;
+  border-radius: 10px;
+}
+
+/* Grid Layout for multiple cards */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+  padding: 16px;
+}
+
+/* Mobile responsive */
+@media (max-width: 480px) {
+  .photo-card {
+    width: 100%;
+  }
+}
+
+/* Optional: Compact version */
+.photo-card.compact {
+  width: 150px;
+}
+
+.photo-card.compact .photo-info img {
+  height: 100px;
+}
+
+.photo-card.compact .photo-title {
+  font-size: 12px;
+  padding: 8px 12px;
+}

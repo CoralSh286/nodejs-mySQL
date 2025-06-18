@@ -1,0 +1,130 @@
+/* Post Card Styles */
+
+.post-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 2px solid transparent;
+}
+
+.post-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.post-card.selected {
+  border-color: #3498db;
+  background-color: #f7fbfe;
+}
+
+.post-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.post-card__title {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+  color: #333;
+  flex: 1;
+}
+
+.post-card__id {
+  font-size: 14px;
+  color: #777;
+  padding: 2px 8px;
+  background-color: #f0f0f0;
+  border-radius: 12px;
+  margin-left: 10px;
+}
+
+.post-card__actions {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.post-card__toggle {
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-size: 14px;
+  color: #555;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.post-card__toggle:hover {
+  background-color: #e0e0e0;
+}
+
+.post-card__toggle.expanded {
+  background-color: #e0e0e0;
+}
+
+.post-card__comments-link {
+  display: inline-block;
+  background-color: #3498db;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.post-card__comments-link:hover {
+  background-color: #2980b9;
+  text-decoration: none;
+}
+
+.post-card__body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  position: relative;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.post-card__body p {
+  margin: 0;
+  color: #444;
+  line-height: 1.5;
+}
+
+.post-card__body.expanded {
+  max-height: 1000px;
+  opacity: 1;
+  visibility: visible;
+  margin-top: 12px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+  .post-card__actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .post-card__title {
+    font-size: 16px;
+  }
+  
+  .post-card__comments-link,
+  .post-card__toggle {
+    width: 100%;
+    text-align: center;
+  }
+}

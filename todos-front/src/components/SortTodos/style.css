@@ -1,0 +1,56 @@
+/* SortTodos - style.css */
+
+.sort-todos-container {
+    display: flex;
+    gap: 8px;
+    margin: 12px 0;
+  }
+  
+  .sort-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .sort-button:hover {
+    background-color: #eaeaea;
+    color: #333;
+  }
+  
+  .sort-button.active {
+    background-color: #3498db;
+    color: white;
+    border-color: #2980b9;
+  }
+  
+  .sort-button.active:hover {
+    background-color: #2980b9;
+  }
+  
+  .sort-button svg {
+    font-size: 18px;
+  }
+  
+  /* רספונסיביות */
+  @media (max-width: 480px) {
+    .sort-todos-container {
+      justify-content: center;
+    }
+    
+    .sort-button {
+      width: 36px;
+      height: 36px;
+    }
+    
+    .sort-button svg {
+      font-size: 16px;
+    }
+  }

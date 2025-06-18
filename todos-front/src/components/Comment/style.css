@@ -1,0 +1,62 @@
+/* Comment Component Styles */
+
+.comment {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    margin-bottom: 16px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .comment.selected {
+    border-color: #3498db;
+    background-color: #f7fbfe;
+  }
+  .comment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+  }
+  
+  .comment-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .comment-email {
+    color: #666;
+    font-size: 14px;
+    background-color: #f0f0f0;
+    padding: 4px 8px;
+    border-radius: 4px;
+    margin-left: 8px;
+  }
+  
+  .comment-body {
+    color: #444;
+    line-height: 1.5;
+    margin: 0;
+    font-size: 15px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .comment-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .comment-email {
+      margin-left: 0;
+      margin-top: 8px;
+    }
+  }

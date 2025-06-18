@@ -1,0 +1,112 @@
+/* Todo Card Styles */
+
+.todo-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 2px solid transparent;
+    border-left: 3px solid #4a90e2;
+  }
+
+  
+  .todo-card:hover {
+    cursor: pointer;
+  }
+  
+  .todo-card.completed {
+    border-left-color: #48bb78;
+    background-color: #f7fafc;
+  }
+  .todo-card.selected {
+    border-color: #3498db;
+    background-color: #f7fbfe;
+    }
+  .todo-card__content {
+    display: flex;
+    align-items: center;
+  }
+  
+  .todo-card__checkbox-container {
+    margin-right: 1rem;
+  }
+  
+  /* Custom checkbox styling */
+  .todo-card__checkbox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .todo-card__checkbox-label {
+    display: inline-block;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border: 2px solid #cbd5e0;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .todo-card__checkbox:checked + .todo-card__checkbox-label {
+    background-color: #48bb78;
+    border-color: #48bb78;
+  }
+  
+  .todo-card__checkbox:checked + .todo-card__checkbox-label::after {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  
+  .todo-card__details {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .todo-card__title {
+    font-size: 1rem;
+    color: #2d3748;
+    margin: 0;
+    transition: all 0.2s ease;
+    flex: 1;
+  }
+  
+  .todo-card.completed .todo-card__title {
+    color: #a0aec0;
+    text-decoration: line-through;
+  }
+  
+  .todo-card__id {
+    background-color: #ebf4ff;
+    color: #4a90e2;
+    padding: 0.25rem 0.5rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-left: 0.75rem;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 640px) {
+    .todo-card {
+      padding: 0.75rem;
+    }
+    
+    .todo-card__title {
+      font-size: 0.95rem;
+    }
+  }

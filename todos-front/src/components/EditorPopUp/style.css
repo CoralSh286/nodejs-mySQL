@@ -1,0 +1,135 @@
+/* Editor Popup Styles */
+.editor-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    animation: fadeIn 0.2s ease-out;
+  }
+  
+  .editor-popup {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
+    animation: slideIn 0.3s ease-out;
+  }
+  
+  .editor-popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    border-bottom: 1px solid #eaeaea;
+  }
+  
+  .editor-popup-title {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  
+  .editor-popup-close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+  }
+  
+  .editor-popup-close:hover {
+    background-color: #f2f2f2;
+    color: #333;
+  }
+  
+  .editor-popup-content {
+    padding: 20px;
+  }
+  
+  .editor-popup-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .editor-popup-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 24px;
+  }
+  
+  .editor-popup-button {
+    padding: 10px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .editor-popup-button.cancel {
+    background-color: #f2f2f2;
+    color: #666;
+    border: 1px solid #ddd;
+  }
+  
+  .editor-popup-button.cancel:hover {
+    background-color: #e5e5e5;
+  }
+  
+  .editor-popup-button.submit {
+    background-color: #3498db;
+    color: white;
+    border: none;
+  }
+  
+  .editor-popup-button.submit:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Animation Keyframes */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes slideIn {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 576px) {
+    .editor-popup {
+      width: 95%;
+      max-height: 95vh;
+    }
+    
+    .editor-popup-actions {
+      flex-direction: column;
+    }
+    
+    .editor-popup-button {
+      width: 100%;
+    }
+  }

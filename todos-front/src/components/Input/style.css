@@ -1,0 +1,118 @@
+/* Input Component Styles */
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2px;
+    position: relative;
+    width: 100%;
+  }
+  
+  .input-container label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #4a5568;
+    margin-bottom: 2px;
+    transition: color 0.2s ease;
+  }
+  
+  .input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .input {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 14px;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    color: #1a202c;
+    background-color: #fff;
+    transition: all 0.2s ease;
+  }
+  
+  .input::placeholder {
+    color: #a0aec0;
+  }
+  
+  .input:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+  }
+  
+  /* Hover state */
+  .input-container.hovered .input {
+    border-color: #cbd5e0;
+  }
+  
+  /* Focused state */
+  .input-container.focused label {
+    color: #4a90e2;
+  }
+  
+  .input-container.focused .input {
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+  }
+  
+  /* Error state */
+  .input-container.error label {
+    color: #e53e3e;
+  }
+  
+  .input-container.error .input {
+    border-color: #e53e3e;
+    box-shadow: 0 0 0 3px rgba(229, 62, 62, 0.1);
+  }
+  
+  .error-message {
+    color: #e53e3e;
+    font-size: 12px;
+    margin-top: 4px;
+  }
+  
+  /* Disabled state */
+  .input-container.disabled label {
+    color: #a0aec0;
+  }
+  
+  .input-container.disabled .input {
+    background-color: #f7fafc;
+    border-color: #e2e8f0;
+    color: #a0aec0;
+    cursor: not-allowed;
+  }
+  
+  /* Toggle password button */
+  .toggle-password {
+    position: absolute;
+    right: 12px;
+    height: 100%;
+    background: none;
+    border: none;
+    color: #718096;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s ease;
+    padding: 0;
+    outline: none;
+  }
+  
+  .toggle-password:hover {
+    color: #4a5568;
+  }
+  
+  .toggle-password svg {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .input-container.disabled .toggle-password {
+    color: #cbd5e0;
+    cursor: not-allowed;
+  }

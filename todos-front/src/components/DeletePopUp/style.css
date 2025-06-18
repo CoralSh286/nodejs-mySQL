@@ -1,0 +1,95 @@
+/* Delete Popup Styles */
+
+.delete-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .delete-popup__content {
+    background-color: white;
+    border-radius: 8px;
+    padding: 24px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
+  }
+  
+  .delete-popup__title {
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: 20px;
+    color: #333;
+  }
+  
+  .delete-popup__message {
+    margin-bottom: 24px;
+    font-size: 16px;
+    color: #555;
+    line-height: 1.4;
+  }
+  
+  .delete-popup__item-name {
+    font-weight: bold;
+    margin: 0 4px;
+  }
+  
+  .delete-popup__buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+  }
+  
+  .delete-popup__btn {
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+  }
+  
+  .delete-popup__btn--cancel {
+    background-color: #f1f1f1;
+    color: #333;
+  }
+  
+  .delete-popup__btn--cancel:hover {
+    background-color: #e4e4e4;
+  }
+  
+  .delete-popup__btn--delete {
+    background-color: #e74c3c;
+    color: white;
+  }
+  
+  .delete-popup__btn--delete:hover {
+    background-color: #c0392b;
+  }
+  
+  /* רספונסיביות */
+  @media (max-width: 480px) {
+    .delete-popup__content {
+      max-width: 90%;
+      padding: 20px;
+    }
+    
+    .delete-popup__buttons {
+      flex-direction: column-reverse;
+      gap: 8px;
+    }
+    
+    .delete-popup__btn {
+      width: 100%;
+      padding: 12px;
+    }
+  }

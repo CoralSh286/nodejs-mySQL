@@ -1,0 +1,97 @@
+/* CRUD Bar Styles */
+
+.hover-crud-bar {
+    display: flex;
+    gap: 8px;
+    padding: 8px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top:10rem;
+    right: 20px;
+    z-index: 10;
+    border: 1px solid #edf2f7;
+  }
+  
+
+  
+  .crud-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 6px;
+    border: none;
+    background-color: #f7fafc;
+    color: #4a5568;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .crud-button:hover {
+    transform: translateY(-2px);
+  }
+  
+  .crud-button:active {
+    transform: translateY(0);
+  }
+  
+
+  
+  /* Button-specific styles */
+  .add-button {
+    color: #4a90e2;
+  }
+  
+  .add-button:hover {
+    background-color: #ebf8ff;
+  }
+  
+  .delete-button {
+    color: #e53e3e;
+  }
+  
+  .delete-button:hover {
+    background-color: #fff5f5;
+  }
+  
+  .edit-button {
+    color: #48bb78;
+  }
+  
+  .edit-button:hover {
+    background-color: #f0fff4;
+  }
+  
+  /* Icon styles */
+  .crud-button svg {
+    width: 18px;
+    height: 18px;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 640px) {
+    .hover-crud-bar {
+      position: static;
+      opacity: 1;
+      transform: none;
+      margin-top: 8px;
+      justify-content: flex-end;
+      box-shadow: none;
+      padding: 4px;
+      background-color: transparent;
+      border: none;
+    }
+    
+    .crud-button {
+      width: 32px;
+      height: 32px;
+    }
+    
+    .crud-button svg {
+      width: 16px;
+      height: 16px;
+    }
+  }

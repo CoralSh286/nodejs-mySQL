@@ -1,0 +1,197 @@
+/* Improved Header Component Styles */
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 2rem;
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: 70px;
+  justify-content: space-between;
+}
+
+/* Logo section */
+.header__logo {
+  display: flex;
+  align-items: center;
+}
+
+.header__logo img {
+  height: 55px; /* Increased logo size */
+  width: auto;
+  object-fit: contain;
+}
+
+/* User info section - positioned to the right */
+.header__user-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #f7fafc;
+  border-radius: 50px;
+  margin-left: auto;
+  transition: all 0.2s ease;
+  position: relative;
+  right: 2rem;
+}
+
+.header__user-info:hover {
+  background-color: #edf2f7;
+}
+
+.header__user-info svg {
+  color: #4a90e2;
+  font-size: 1rem;
+}
+
+.header__user-name {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #4a5568;
+}
+
+/* Navigation section - repositioned to be more centered */
+.header__nav {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.header__nav-list {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  gap: 2rem; /* Increased gap between nav items */
+}
+
+.header__nav-item a {
+  text-decoration: none;
+  color: #4a5568;
+  font-weight: 500;
+  font-size: 1rem; /* Slightly larger font */
+  transition: color 0.2s ease;
+  padding: 0.5rem 0;
+  position: relative;
+}
+
+.header__nav-item a:hover {
+  color: #4a90e2;
+}
+
+/* Underline effect on hover */
+.header__nav-item a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px; /* Moved down slightly */
+  left: 0;
+  background-color: #4a90e2;
+  transition: width 0.3s ease;
+}
+
+.header__nav-item a:hover::after {
+  width: 100%;
+}
+
+/* Logout button repositioned */
+.header__logout-btn {
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 0 2rem;
+}
+
+.header__logout-btn:hover {
+  background-color: #3a7cc0;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(74, 144, 226, 0.2);
+}
+
+.header__logout-btn:active {
+  transform: translateY(0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .header {
+    height: auto;
+    flex-wrap: wrap;
+    padding: 1rem;
+  }
+  
+  .header__logo {
+    margin-bottom: 0.5rem;
+  }
+  
+  .header__user-info {
+    position: static;
+    margin-left: auto;
+    right: 0;
+    margin-bottom: 0.5rem;
+  }
+  
+  .header__nav {
+    position: static;
+    transform: none;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+  }
+  
+  .header__nav-list {
+    gap: 1rem;
+  }
+  
+  .header__logout-btn {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .header__nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .header__nav-list {
+    margin-bottom: 1rem;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  
+  .header__logout-btn {
+    width: 100%;
+    max-width: 200px;
+  }
+}
+.active-link {
+  color: #4a90e2 !important;
+  font-weight: 600;
+  position: relative;
+}
+
+.active-link::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #4a90e2;
+  border-radius: 2px;
+}

@@ -1,0 +1,46 @@
+/* PostsPage Styles */
+
+.posts-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1.5rem;
+  }
+  
+
+  .posts-grid {
+    display: grid;
+    gap: 1.5rem;
+  }
+  
+
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .posts-container {
+      padding: 1rem;
+    }
+    
+    .posts-title {
+      font-size: 1.75rem;
+      margin-bottom: 1.25rem;
+    }
+    
+    .posts-grid {
+      gap: 1.25rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .posts-title {
+      font-size: 1.5rem;
+    }
+    
+    .posts-grid {
+      gap: 1rem;
+    }
+  }

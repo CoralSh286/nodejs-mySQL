@@ -1,0 +1,12 @@
+/* HomePage Styles */
+
+.home-page {
+    width: 100%;
+    height: 100vh;
+    background-color: #f7f9fc;
+    overflow-y: auto;
+  }
+  .pagesContainer{
+    padding-top: 20px;
+   }
+  
