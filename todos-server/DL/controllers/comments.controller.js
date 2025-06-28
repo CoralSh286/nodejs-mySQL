@@ -27,7 +27,7 @@ async function readMany({ postId }) {
     return {
       success: true,
       data: result,
-      message: "posts tasks loaded successfully",
+      message: "comments loaded successfully",
     };
   } catch (error) {
     throw new Error("Failed to read comments: " + error.message);

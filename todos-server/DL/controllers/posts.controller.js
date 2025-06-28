@@ -22,7 +22,7 @@ async function readMany({ userId, title }) {
     let query = "SELECT * FROM posts WHERE user_id = ?";
     let params = [userId];
 
-    // מערך של תנאים נוספים
+
     const conditions = [];
 
     if (title && title.trim() !== "") {
@@ -30,7 +30,6 @@ async function readMany({ userId, title }) {
       params.push(`%${title}%`);
     }
 
-    // הוספת כל התנאים לשאילתה
     if (conditions.length > 0) {
       query += " AND " + conditions.join(" AND ");
     }
